@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{191CB937-C1E6-49B5-B194-EE6C94A54E1F}</ProjectGuid>
+    <ProjectGuid>{31FC8185-6B9D-4521-BAAD-7D0661E6C71A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ContactsApp</RootNamespace>
-    <AssemblyName>ContactsApp</AssemblyName>
+    <RootNamespace>ContactsApp.UnitTests</RootNamespace>
+    <AssemblyName>ContactsApp.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=4.0.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.4.1.0\lib\net462\nunit.framework.dll</HintPath>
     </Reference>
@@ -60,11 +57,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PhoneNimber.cs" />
-    <Compile Include="Contact.cs" />
-    <Compile Include="Project.cs" />
-    <Compile Include="ProjectManager.cs" />
+    <Compile Include="ContactTest.cs" />
+    <Compile Include="PhoneNumberTest.cs" />
+    <Compile Include="ProjectManagerTest.cs" />
+    <Compile Include="ProjectTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContactsApp\ContactsApp.csproj">
+      <Project>{191cb937-c1e6-49b5-b194-ee6c94a54e1f}</Project>
+      <Name>ContactsApp</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
